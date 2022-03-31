@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 
+        交集选择器
+            作用：同时选中符合条件的多个选择器
+            语法：选择器1.选择器2
+        并集选择器
+            语法：多个选择器之间用，隔开
+
+        子元素选择器
+            作用：选中指定父元素的指定子元素
+            语法：父元素 > 子元素
+
+        后代选择器
+            作用：选中指定元素的所有后代元素
+            语法：元素 后代元素
+
+        兄弟选择器
+            作用：选中指定元素的下面相邻元素
+            语法：元素 + 兄弟元素（+号是相邻的兄弟元素，波浪号是下面所有的兄弟元素）
+
+        属性选择器
+            属性选择器可以根据属性或者属性的值来寻找包含该属性的元素
+            标签[属性名=xxxx]{
+
+            }
+            其中标签可以省略，=xxx也可以省略。
+
+        伪类选择器(不存在的类)
+            - 伪类用来描述一个元素的特殊状态
+                - 比如第一个元素，被点击的元素，鼠标移入的元素
+            - 伪类一般使用：开头
+                - :first-child 第一个子元素
+                - :last-child 最后一个子元素
+                - :nth-child 第n个子元素
+                    特殊值：
+                        n的范围为0到正无穷
+                        2n or even 的范围为所有偶数位的元素
+                        2n+1 or odd 表示选择为奇数位的元素
+                - : first-of-type 是在同类型的元素下进行选择
+
+        伪元素选择器
+            - 表示页面中并不存在的元素
+            伪元素使用：：开头
+            比如
+                p::first-letter{
+
+                }
+                div::before{
+                    content: aaa
+                }可以在div标签中的内容前添加内容
+     -->
+     <style>
+         ul>li:first-child{
+             color: tomato;
+         }
+     </style>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {
+            /* 
+                width 和 height设置的是内容区的大小，并不是设置盒子的大小。
+                内容区中填充着所有的子元素和文本内容。
+            */
+            width: 200px;
+            height: 200px;
+
+            /* 
+                边框（border）：边框是盒子的边缘。
+                边框的大小也会影响盒子的大小！
+                设置边框需要设置三个元素：
+                    边框的宽度：border-width
+                        可以指定多个方向的宽度，按照顺时针方向指定
+                        同样也可以使用borde-xxx-width来指定上下所有的边界宽度
+                    边框的颜色：border-color
+
+                    边框的样式：border-style
+                        solid 实线
+                        dotted 点状实线
+                        double 双线
+
+            */
+            /* 
+                简写：border：10px brown solid;
+            */
+            border-width: 10px;
+            border-color: brown;
+            border-style: solid;
+
+            /* 
+                内边距padding
+                    内容区和边界的距离是内边距
+                    一共有四个方向的内边距
+                     padding-top
+                     xxxx
+                     内边距的设置会影响盒子的大小
+                     背景颜色会延伸到内边距上
+                
+                一个盒子的可见框大小由 内容区，内边距，边框共同决定
+            
+            */
+            /* 
+                外边距 margin
+                    外边距不会影响盒子可见框的大小，会影响盒子实际占用空间的大小。
+                    外边距决定的是盒子的位置
+                    四个方向的外边距分别由，如果设置的是负值则会向相反的方向移动
+                        margin-top
+                        margin-right
+                            默认情况下设置right没用
+                        margin-bottom
+                            设置一个正值，其下的元素会移动
+                        margin-left
+
+                    
+                    页面元素是按照自左向右排列的，设置左，上是移动元素自己，
+                    设置下，右则会移动其他元素。
+
+
+            */
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        盒子模型
+            CSS将页面中所有的元素都设置为了一个矩形的盒子
+            对页面的布局就是将盒子摆放到不同的位置
+            每一个盒子的组成：
+                内容区（content）
+                边框（border）
+                内边距（padding）
+                外边距（margin）
+
+
+     -->
+     <div class="box1">
+
+     </div>
+</body>
+</html>

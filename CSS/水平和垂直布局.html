@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer{
+            width: 800px;
+            height: 200px;
+            border: 10px red solid;
+        }
+
+        .inner{
+            margin-left: 20px;
+            margin-top: 40px;
+            padding: 40px;
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+            /* 
+                元素的水平布局
+                    元素在其父元素中水瓶方向的位置由一下几个属性共同决定，子元素的宽度的默认值是auto
+                        margin-left 默认0
+                        border-left 默认0
+                        padding-left 默认0
+                        width 默认值是auto
+                        padding-right
+                        border-right
+                        margin-right
+                    上边的几个值加起来必须等于父元素的内容区的宽度（必须）
+                        margin-left 默认0
+                        +border-left 默认0
+                        +padding-left 默认0
+                        +width 200
+                        +padding-right 0
+                        +border-right 0
+                        +margin-right 0 = 800px
+                        以上的等式必须满足，如果没有auto的情况，则浏览器会自动调整
+                        margin-right的值
+
+                        如果将一个宽度和外边距都设置为auto，则宽度会自动为最大，外边距默认为0
+                        水平居中举例：
+                            width：200px;
+                            margin：0 auto;
+                元素的垂直布局
+                    默认情况下，父元素的高度会被子元素的高度撑开。
+                    子元素在父元素内容区中排列，如果子元素的大小超出父元素的大小，
+                    则子元素会从父元素中溢出
+                    可以使用overflow来处理子元素的溢出
+                    overflow：hidden; 溢出内容会被裁剪
+                    overflow：scroll; 生成滚动条
+                    overflow：auto;根据需要生成滚动条
+                
+                相邻的垂直方向的元素的外边距会重叠。
+                    兄弟元素间的相邻垂直外边距会取两者之间的较大值，如果一正一负则取和。
+
+                        即取margin-bottom 和 margin-top的最大值
+                    
+                    父子元素之间的重叠
+                        父子间的外边距,子元素的外边距会传递给父元素,相当于父元素会采用子元素的外边距。
+                        父子外边距的折叠会影响到页面的布局。
+                            解决方法：
+                                1. 不采用外边距
+
+            */
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">
+
+        </div>
+    </div>
+</body>
+</html>
